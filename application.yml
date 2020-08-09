@@ -13,12 +13,7 @@ management:
     web:
       exposure:
         include: '*'
-      base-path: /
   metrics:
     export:
       prometheus:
         enabled: true
-
-spring:
-  jmx:
-    enabled: true
