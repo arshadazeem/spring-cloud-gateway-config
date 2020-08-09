@@ -33,9 +33,6 @@ spring:
         - RewritePath=/api/(?<movies>.*), /$\{movies}
         - AddResponseHeader=X-Some-Header, aboullaite.me
 
-server:
-  port: 8887
-
 eureka:
   client:
     serviceUrl:
