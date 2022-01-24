@@ -1,8 +1,6 @@
 spring:
   application.name: aazeem-gateway
   cloud:
-    config:
-      server.git.uri: 
     gateway:
       routes:
       - id: movies
