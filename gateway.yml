@@ -8,11 +8,11 @@ spring:
       - id: movies
         uri: http://localhost:8081/movies
         predicates:
-        - Path=/mymovies/
+        - Path=/movies/
       - id: books
         uri: http://localhost:8082/books
         predicates:
-        - Path=/mybooks/      
+        - Path=/books/      
       httpclient:
         wiretap: true
       httpserver:
