@@ -1,14 +1,19 @@
-hystrix.command.fallbackcmd.execution.isolation.thread.timeoutInMilliseconds: 2000
 spring:
+  application.name: aazeem-gateway
   cloud:
+    config:
+      server.git.uri: 
     gateway:
       routes:
-      - id: book-store
-        uri: http://book-store
+      - id: movies
+        uri: http://localhost:8081/movies
         predicates:
-        - Path=/api/books/**
-
-      - id: movie-store
-        uri: http://movie-store
+        - Path=/movies/
+      - id: books
+        uri: http://localhost:8082/books
         predicates:
-        - Path=/api/movies/**
+        - Path=/books/      
+      httpclient:
+        wiretap: true
+      httpserver:
+        wiretap: true
